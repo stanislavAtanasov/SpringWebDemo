@@ -1,4 +1,25 @@
 -------------------------------------------------------------------------------
 Test set: com.example.SpringWebDemo.SpringWebDemoApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.416 s - in com.example.SpringWebDemo.SpringWebDemoApplicationTests
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 5.013 s <<< FAILURE! - in com.example.SpringWebDemo.SpringWebDemoApplicationTests
+contextLoads(com.example.SpringWebDemo.SpringWebDemoApplicationTests)  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: 
+Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.internal.exception.FlywaySqlException: 
+Unable to obtain connection from database: Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199]
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 90020
+Error Code : 90020
+Message    : Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199]
+
+Caused by: org.flywaydb.core.internal.exception.FlywaySqlException: 
+
+Unable to obtain connection from database: Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199]
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 90020
+Error Code : 90020
+Message    : Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199]
+
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-199]
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/s.atanasov/spring_web.mv.db [1.4.199/7]
+

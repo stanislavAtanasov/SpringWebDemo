@@ -25,6 +25,7 @@ public class SpringDataJPAImpl implements Repository {
     @Override
     public User createUser(User user) {
         log.info("called createUser by name:%s", user);
+        //todo check if user is in DB !
         return repository.save(user);
     }
 }

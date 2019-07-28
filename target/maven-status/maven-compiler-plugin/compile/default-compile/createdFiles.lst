@@ -1,7 +1,9 @@
 com\example\SpringWebDemo\web\controller\Controller.class
 com\example\SpringWebDemo\repository\implementations\SpringDataJPAImpl.class
+com\example\SpringWebDemo\web\controller\HomeController.class
 com\example\SpringWebDemo\repository\Repository.class
 com\example\SpringWebDemo\SpringWebDemoApplication.class
+com\example\SpringWebDemo\config\CustomAuthenticationProvider.class
 com\example\SpringWebDemo\config\WebSecurityConfig.class
 com\example\SpringWebDemo\repository\implementations\SpringDataJPA.class
 com\example\SpringWebDemo\datasource\H2DataSourceConfig.class

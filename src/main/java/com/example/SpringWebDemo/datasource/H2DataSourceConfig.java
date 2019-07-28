@@ -12,8 +12,9 @@ public class H2DataSourceConfig {
     @Bean
     public DataSource getDataSource() {
         DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
+        //todo to get this from config !
         dataSourceBuilder.driverClassName("org.h2.Driver");
-        dataSourceBuilder.url("jdbc:h2:~/spring_web");
+        dataSourceBuilder.url("jdbc:h2:~/spring_web;mode=mysql");
         dataSourceBuilder.username("SA");
         dataSourceBuilder.password("");
         return dataSourceBuilder.build();
