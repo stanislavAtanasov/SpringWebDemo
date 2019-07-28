@@ -18,9 +18,9 @@ public class Controller {
 
     @GetMapping(path = "get/{name}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public String getUser(Authentication authentication, @PathVariable String name) {
-        return  repository.fetchUserByName(name)
-                .map(d ->"Hello "+d.getUsername())
-                .orElse("No such user with username: "+name);
+        return repository.fetchUserByName(name)
+                .map(d -> "Hello " + d.getUsername())
+                .orElse("No such user with username: " + name);
     }
 
     //todo to change it to Post.  Use get for faster testing
@@ -28,7 +28,7 @@ public class Controller {
     public String createUser(Authentication authentication, @PathVariable String name) {
         User user = new User();
         user.setUsername(name);
-        user.setMail(name+"@gmail.com");
+        user.setMail(name + "@gmail.com");
         log.info(repository.createUser(user).toString());
         return "Create user with id  :" + user.getId();
     }
