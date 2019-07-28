@@ -1,7 +1,10 @@
-package com.example.SpringDemo.repository;
+package com.example.SpringWebDemo.repository;
 
-import com.example.SpringDemo.entity.User;
+import com.example.SpringWebDemo.entity.User;
 
-interface Repository {
- User fetchUserByName();
+import java.util.Optional;
+
+public interface Repository {
+    Optional<User> fetchUserByName(String name);
+    User createUser(User user);
 }
