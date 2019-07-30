@@ -1,0 +1,6 @@
+projectKey=com.example:SpringWebDemo
+serverUrl=http://localhost:9000
+serverVersion=7.6.0.21501
+dashboardUrl=http://localhost:9000/dashboard?id=com.example%3ASpringWebDemo
+ceTaskId=AWw5l1eQTmSPQ1CYgBIq
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AWw5l1eQTmSPQ1CYgBIq

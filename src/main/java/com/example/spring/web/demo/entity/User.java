@@ -1,4 +1,4 @@
-package com.example.SpringWebDemo.entity;
+package com.example.spring.web.demo.entity;
 
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.AllArgsConstructor;

@@ -1,7 +1,7 @@
-package com.example.SpringWebDemo.web.controller;
+package com.example.spring.web.demo.web.controller;
 
-import com.example.SpringWebDemo.entity.User;
-import com.example.SpringWebDemo.repository.Repository;
+import com.example.spring.web.demo.entity.User;
+import com.example.spring.web.demo.repository.Repository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;

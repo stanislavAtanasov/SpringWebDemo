@@ -1,5 +1,5 @@
-package com.example.SpringWebDemo.repository.implementations;
-import com.example.SpringWebDemo.entity.User;
+package com.example.spring.web.demo.repository.implementations;
+import com.example.spring.web.demo.entity.User;
 import org.springframework.data.repository.CrudRepository;
 import java.util.Optional;
 

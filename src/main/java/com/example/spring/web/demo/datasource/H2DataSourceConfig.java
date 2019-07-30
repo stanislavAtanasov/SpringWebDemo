@@ -1,4 +1,4 @@
-package com.example.SpringWebDemo.datasource;
+package com.example.spring.web.demo.datasource;
 
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;

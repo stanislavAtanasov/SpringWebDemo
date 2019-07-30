@@ -1,8 +1,8 @@
-package com.example.SpringWebDemo.repository.implementations;
+package com.example.spring.web.demo.repository.implementations;
 
 
-import com.example.SpringWebDemo.entity.User;
-import com.example.SpringWebDemo.repository.Repository;
+import com.example.spring.web.demo.entity.User;
+import com.example.spring.web.demo.repository.Repository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

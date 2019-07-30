@@ -1,4 +1,4 @@
-package com.example.SpringWebDemo;
+package com.example.spring.web.demo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

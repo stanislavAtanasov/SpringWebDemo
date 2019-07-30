@@ -1,6 +1,6 @@
-package com.example.SpringWebDemo.repository;
+package com.example.spring.web.demo.repository;
 
-import com.example.SpringWebDemo.entity.User;
+import com.example.spring.web.demo.entity.User;
 
 import java.util.Optional;
 
