@@ -17,13 +17,12 @@ public class SpringDataJPAImpl implements Repository {
     SpringDataJPA repository;
 
     @Override
-    public Optional<User> fetchUserByName(String name) {
-        log.info("called fetch by name:%s", name);
-        return repository.findByUsername(name);
+    public Optional<User> fetchUserByUsername(String username) {
+        return repository.findByUsername(username);
     }
 
     @Override
-    public User  createUser(User user) {
+    public User createUser(User user) {
         log.info("called createUser by name:%s", user);
         //todo check if user is in DB !
         return repository.save(user);

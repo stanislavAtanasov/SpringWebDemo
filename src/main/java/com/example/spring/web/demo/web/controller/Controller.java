@@ -1,7 +1,8 @@
 package com.example.spring.web.demo.web.controller;
 
+import com.example.spring.web.demo.dto.UserDto;
 import com.example.spring.web.demo.entity.User;
-import com.example.spring.web.demo.repository.Repository;
+import com.example.spring.web.demo.facade.Facade;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -13,14 +14,17 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 public class Controller {
 
+    private final Facade facade;
+
     @Autowired
-    Repository repository;
+    public Controller(Facade facade) {
+        this.facade = facade;
+    }
 
     @GetMapping(path = "get/{name}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public String getUser(Authentication authentication, @PathVariable String name) {
-        return repository.fetchUserByName(name)
-                .map(d -> "Hello " + d.getUsername())
-                .orElse("No such user with username: " + name);
+    public UserDto getUser(Authentication authentication, @PathVariable String username) {
+        //todo log authentication
+        return facade.fetchUserDTOByUsername(username);
     }
 
     //todo to change it to Post.  Use get for faster testing
@@ -29,7 +33,8 @@ public class Controller {
         User user = new User();
         user.setUsername(name);
         user.setMail(name + "@gmail.com");
-        log.info(repository.createUser(user).toString());
+        //todo to add it in Factory !
+       // log.info(repository.createUser(user).toString());
         return "Create user with id  :" + user.getId();
     }
 }
